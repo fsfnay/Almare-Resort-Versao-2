@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.Sobre"
+    Title="Sobre"
+    BackgroundColor="{StaticResource OffWhite}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="28,40"
+            Spacing="22">
+
+            <VerticalStackLayout Spacing="8">
+
+                <Label
+                    Text="ALMARE"
+                    FontSize="34"
+                    FontAttributes="Bold"
+                    CharacterSpacing="4"
+                    TextColor="{StaticResource Azul}"
+                    HorizontalTextAlignment="Center"/>
+
+                <Label
+                    Text="RESORT"
+                    FontSize="13"
+                    CharacterSpacing="3"
+                    TextColor="{StaticResource AreiaDourada}"
+                    HorizontalTextAlignment="Center"/>
+
+            </VerticalStackLayout>
+
+            <BoxView
+                HeightRequest="2"
+                WidthRequest="50"
+                Color="{StaticResource AreiaDourada}"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Sobre o projeto"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="{StaticResource Chumbo}"
+                HorizontalTextAlignment="Center"/>
+
+            <Label
+                Text="O Almare Resort é um projeto acadêmico de aplicativo de hospedagem, desenvolvido com .NET MAUI. Sua proposta é apresentar uma experiência digital inspirada no conforto, na natureza e na tranquilidade de um resort."
+                FontSize="15"
+                TextColor="{StaticResource Chumbo}"
+                HorizontalTextAlignment="Center"
+                LineHeight="1.4"/>
+
+            <Frame
+                BackgroundColor="{StaticResource White}"
+                BorderColor="{StaticResource AreiaDourada}"
+                CornerRadius="14"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Desenvolvimento"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource Azul}"/>
+
+                    <Label
+                        Text="Desenvolvedora"
+                        FontSize="13"
+                        TextColor="{StaticResource AreiaDourada}"/>
+
+                    <Label
+                        Text="Nayara Fernandes"
+                        FontSize="16"
+                        TextColor="{StaticResource Chumbo}"/>
+
+                    <Label
+                        Text="Ano de desenvolvimento"
+                        FontSize="13"
+                        TextColor="{StaticResource AreiaDourada}"/>
+
+                    <Label
+                        Text="2026"
+                        FontSize="16"
+                        TextColor="{StaticResource Chumbo}"/>
+
+                    <Label
+                        Text="Tecnologia: .NET MAUI e C#"
+                        FontSize="13"
+                        TextColor="{StaticResource Chumbo}"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label
+                Text="Almare Resort — Um refúgio para renovar os sentidos."
+                FontSize="13"
+                FontAttributes="Italic"
+                TextColor="{StaticResource Azul}"
+                HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

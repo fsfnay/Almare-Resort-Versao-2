@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             Title="Almare Resort"
+             BackgroundColor="#F3F0E9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="18">
+
+            <Label Text="ALMARE RESORT"
+                   FontSize="15"
+                   FontAttributes="Bold"
+                   CharacterSpacing="3"
+                   TextColor="#496779"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Sua estadia começa aqui"
+                   FontSize="27"
+                   FontAttributes="Bold"
+                   TextColor="#303B3C"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Escolha os detalhes da sua hospedagem."
+                   FontSize="14"
+                   TextColor="#718779"
+                   HorizontalOptions="Center"/>
+
+            <Frame BackgroundColor="White"
+                   BorderColor="Transparent"
+                   CornerRadius="16"
+                   Padding="18">
+
+                <VerticalStackLayout Spacing="14">
+
+                    <Label Text="Hóspedes"
+                           FontSize="19"
+                           FontAttributes="Bold"
+                           TextColor="#496779"/>
+
+                    <Grid ColumnDefinitions="*,Auto"
+                          RowDefinitions="Auto,Auto"
+                          RowSpacing="12">
+
+                        <Label Text="Adultos"
+                               Grid.Row="0"
+                               VerticalOptions="Center"
+                               TextColor="#303B3C"/>
+
+                        <Stepper x:Name="stp_adultos"
+                                 Grid.Row="0"
+                                 Grid.Column="1"
+                                 Minimum="0"
+                                 Maximum="10"
+                                 Value="1"
+                                 Increment="1"
+                                 ValueChanged="OnHospedesChanged"/>
+
+                        <Label Text="Crianças"
+                               Grid.Row="1"
+                               VerticalOptions="Center"
+                               TextColor="#303B3C"/>
+
+                        <Stepper x:Name="stp_criancas"
+                                 Grid.Row="1"
+                                 Grid.Column="1"
+                                 Minimum="0"
+                                 Maximum="10"
+                                 Value="0"
+                                 Increment="1"
+                                 ValueChanged="OnHospedesChanged"/>
+
+                    </Grid>
+
+                    <Label x:Name="lbl_total_hospedes"
+                           Text="Total: 1 hóspede"
+                           FontAttributes="Bold"
+                           TextColor="#718779"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="White"
+                   BorderColor="Transparent"
+                   CornerRadius="16"
+                   Padding="18">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Acomodação"
+                           FontSize="19"
+                           FontAttributes="Bold"
+                           TextColor="#496779"/>
+
+                    <Label Text="Selecione a suíte desejada"
+                           FontSize="13"
+                           TextColor="#718779"/>
+
+                    <Picker x:Name="pck_quarto"
+                            Title="Escolha sua suíte"
+                            TextColor="#303B3C"
+                            SelectedIndexChanged="OnQuartoChanged"/>
+
+                    <Label x:Name="lbl_descricao_quarto"
+                           Text="Selecione uma acomodação para ver os detalhes."
+                           FontSize="13"
+                           TextColor="#718779"/>
+
+                    <Picker x:Name="pck_camas"
+                            Title="Configuração das camas"
+                            IsVisible="False"
+                            TextColor="#303B3C"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="White"
+                   BorderColor="Transparent"
+                   CornerRadius="16"
+                   Padding="18">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Período da estadia"
+                           FontSize="19"
+                           FontAttributes="Bold"
+                           TextColor="#496779"/>
+
+                    <Label Text="Check-in"
+                           FontAttributes="Bold"
+                           TextColor="#303B3C"/>
+
+                    <DatePicker x:Name="dtpck_checkin"
+                                Format="dd/MM/yyyy"
+                                TextColor="#303B3C"/>
+
+                    <Label Text="Check-out"
+                           FontAttributes="Bold"
+                           TextColor="#303B3C"/>
+
+                    <DatePicker x:Name="dtpck_checkout"
+                                Format="dd/MM/yyyy"
+                                TextColor="#303B3C"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Continuar"
+                    Clicked="OnAvancarClicked"
+                    BackgroundColor="#496779"
+                    TextColor="White"
+                    CornerRadius="12"
+                    FontAttributes="Bold"
+                    HeightRequest="52"/>
+
+            <Label Text="Almare Resort • Um refúgio para renovar os sentidos."
+                   FontSize="11"
+                   TextColor="#718779"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,4,0,12"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

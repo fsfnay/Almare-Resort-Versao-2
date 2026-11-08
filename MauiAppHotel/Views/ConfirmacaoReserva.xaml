@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ConfirmacaoReserva"
+             Title="Confirmação"
+             BackgroundColor="{StaticResource Gray100}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="18">
+
+            <Label Text="ALMARE"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource Primary}"/>
+
+            <Label Text="Resumo da reserva"
+                   FontSize="23"
+                   FontAttributes="Bold"/>
+
+            <Frame Padding="20" BackgroundColor="White">
+
+                <VerticalStackLayout Spacing="14">
+
+                    <Label Text="DETALHES DA HOSPEDAGEM"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           TextColor="{StaticResource Primary}"/>
+
+                    <Label x:Name="lblSuite"/>
+                    <Label x:Name="lblCamas"/>
+                    <Label x:Name="lblHospedes"/>
+                    <Label x:Name="lblCheckin"/>
+                    <Label x:Name="lblCheckout"/>
+                    <Label x:Name="lblNoites"/>
+
+                    <BoxView HeightRequest="1"
+                             BackgroundColor="{StaticResource Gray200}"/>
+
+                    <Label Text="VALOR DA RESERVA"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}"/>
+
+                    <Label x:Name="lblDiaria"/>
+                    <Label x:Name="lblTotal"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Button x:Name="btnConfirmar"
+                    Text="CONFIRMAR RESERVA"
+                    Clicked="OnConfirmarClicked"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="55"/>
+
+            <Button Text="Voltar às acomodações"
+                    Clicked="OnVoltarClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource Primary}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

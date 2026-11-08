@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.MainPage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{StaticResource OffWhite}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="28,45,28,30"
+            Spacing="25">
+
+            <!-- Identidade do hotel -->
+            <VerticalStackLayout
+                Spacing="8"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <Label
+                    Text="ALMARE"
+                    FontSize="38"
+                    FontAttributes="Bold"
+                    CharacterSpacing="5"
+                    TextColor="{StaticResource Azul}"
+                    HorizontalTextAlignment="Center"/>
+
+                <Label
+                    Text="R E S O R T"
+                    FontSize="13"
+                    CharacterSpacing="3"
+                    TextColor="{StaticResource AreiaDourada}"
+                    HorizontalTextAlignment="Center"/>
+
+                <BoxView
+                    Color="{StaticResource AreiaDourada}"
+                    HeightRequest="2"
+                    WidthRequest="55"
+                    HorizontalOptions="Center"
+                    Margin="0,10,0,0"/>
+
+            </VerticalStackLayout>
+
+            <!-- Apresentação -->
+            <Frame
+                BackgroundColor="{StaticResource Azul}"
+                BorderColor="Transparent"
+                CornerRadius="18"
+                Padding="22"
+                HasShadow="False">
+
+                <VerticalStackLayout Spacing="16">
+
+                    <Label
+                        Text="Seu refúgio junto à natureza"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource OffWhite}"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Label
+                        Text="Descubra uma experiência de descanso, conforto e tranquilidade em um ambiente pensado para renovar seus sentidos."
+                        FontSize="15"
+                        TextColor="{StaticResource OffWhite}"
+                        HorizontalTextAlignment="Center"
+                        LineHeight="1.4"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Informações -->
+            <VerticalStackLayout Spacing="8">
+
+                <Label
+                    Text="Uma experiência especial"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource Chumbo}"/>
+
+                <Label
+                    Text="Desfrute de momentos de descanso em um espaço que valoriza a simplicidade, o acolhimento e a conexão com a natureza."
+                    FontSize="14"
+                    TextColor="{StaticResource Chumbo}"
+                    LineHeight="1.4"/>
+
+            </VerticalStackLayout>
+
+            <!-- Ações -->
+            <VerticalStackLayout Spacing="12">
+
+                <Button
+                    Text="Conheça nossas acomodações"
+                    Clicked="OnContratarClicked"
+                    BackgroundColor="{StaticResource Azul}"
+                    TextColor="{StaticResource OffWhite}"/>
+
+                <Button
+                    Text="Sobre o Almare Resort"
+                    Clicked="OnSobreClicked"
+                    BackgroundColor="{StaticResource AreiaDourada}"
+                    TextColor="{StaticResource OffWhite}"/>
+
+            </VerticalStackLayout>
+
+            <Label
+                Text="ALMARE RESORT • CONFORTO E TRANQUILIDADE"
+                FontSize="10"
+                CharacterSpacing="1"
+                TextColor="{StaticResource Azul}"
+                HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
