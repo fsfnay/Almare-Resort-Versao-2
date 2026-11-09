@@ -19,6 +19,52 @@ public partial class ContratacaoHospedagem : ContentPage
         AtualizarHospedes();
     }
 
+    // Eventos individuais dos cartões: não dependem do objeto que dispara o toque.
+    private void OnStandardCardTapped(object sender, TappedEventArgs e)
+    {
+        SelecionarSuite("Suíte Standard");
+    }
+
+    private void OnDeluxeCardTapped(object sender, TappedEventArgs e)
+    {
+        SelecionarSuite("Suíte Deluxe");
+    }
+
+    private void OnPremiumCardTapped(object sender, TappedEventArgs e)
+    {
+        SelecionarSuite("Suíte Premium");
+    }
+
+    private void SelecionarSuite(string suite)
+    {
+        if (pck_quarto.ItemsSource is not IEnumerable<string> disponiveis ||
+            !disponiveis.Contains(suite))
+            return;
+
+        pck_quarto.SelectedItem = suite;
+        AtualizarDescricao();
+        AtualizarCartoes();
+    }
+
+    private void AtualizarCartoes()
+    {
+        string selecionada = pck_quarto.SelectedItem as string ?? "";
+        cardStandard.IsVisible = pck_quarto.ItemsSource is IEnumerable<string> itens1 && itens1.Contains("Suíte Standard");
+        cardDeluxe.IsVisible = pck_quarto.ItemsSource is IEnumerable<string> itens2 && itens2.Contains("Suíte Deluxe");
+        cardPremium.IsVisible = pck_quarto.ItemsSource is IEnumerable<string> itens3 && itens3.Contains("Suíte Premium");
+
+        AtualizarEstiloCartao(cardStandard, selecionada == "Suíte Standard");
+        AtualizarEstiloCartao(cardDeluxe, selecionada == "Suíte Deluxe");
+        AtualizarEstiloCartao(cardPremium, selecionada == "Suíte Premium");
+    }
+
+    private void AtualizarEstiloCartao(Border cartao, bool selecionado)
+    {
+        cartao.Stroke = selecionado ? Color.FromArgb("#C4A36A") : Color.FromArgb("#D8D1C4");
+        cartao.StrokeThickness = selecionado ? 3 : 1.5;
+        cartao.BackgroundColor = selecionado ? Color.FromArgb("#E8E0D0") : Color.FromArgb("#F8F6F0");
+    }
+
     private int TotalHospedes =>
         (int)stp_adultos.Value + (int)stp_criancas.Value;
 
@@ -49,11 +95,13 @@ public partial class ContratacaoHospedagem : ContentPage
             pck_quarto.SelectedItem = null;
 
         AtualizarDescricao();
+        AtualizarCartoes();
     }
 
     private void OnQuartoChanged(object sender, EventArgs e)
     {
         AtualizarDescricao();
+        AtualizarCartoes();
     }
 
     private void AtualizarDescricao()

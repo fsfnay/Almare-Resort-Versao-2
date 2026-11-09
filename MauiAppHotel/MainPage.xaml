@@ -4,12 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MauiAppHotel.MainPage"
     NavigationPage.HasNavigationBar="False"
-    BackgroundColor="{StaticResource OffWhite}">
+    BackgroundColor="{StaticResource Azul}">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="28,45,28,30"
-            Spacing="25">
+            Padding="28,42,28,30"
+            Spacing="22">
 
             <!-- Identidade do hotel -->
             <VerticalStackLayout
@@ -22,7 +22,7 @@
                     FontSize="38"
                     FontAttributes="Bold"
                     CharacterSpacing="5"
-                    TextColor="{StaticResource Azul}"
+                    TextColor="{StaticResource OffWhite}"
                     HorizontalTextAlignment="Center"/>
 
                 <Label
@@ -43,7 +43,7 @@
 
             <!-- Apresentação -->
             <Frame
-                BackgroundColor="{StaticResource Azul}"
+                BackgroundColor="{StaticResource AzulSuave}"
                 BorderColor="Transparent"
                 CornerRadius="18"
                 Padding="22"
@@ -75,12 +75,12 @@
                     Text="Uma experiência especial"
                     FontSize="20"
                     FontAttributes="Bold"
-                    TextColor="{StaticResource Chumbo}"/>
+                    TextColor="{StaticResource OffWhite}"/>
 
                 <Label
                     Text="Desfrute de momentos de descanso em um espaço que valoriza a simplicidade, o acolhimento e a conexão com a natureza."
                     FontSize="14"
-                    TextColor="{StaticResource Chumbo}"
+                    TextColor="{StaticResource OffWhite}"
                     LineHeight="1.4"/>
 
             </VerticalStackLayout>
@@ -91,13 +91,15 @@
                 <Button
                     Text="Conheça nossas acomodações"
                     Clicked="OnContratarClicked"
-                    BackgroundColor="{StaticResource Azul}"
-                    TextColor="{StaticResource OffWhite}"/>
+                    BackgroundColor="{StaticResource AreiaDourada}"
+                    TextColor="{StaticResource Azul}"/>
 
                 <Button
                     Text="Sobre o Almare Resort"
                     Clicked="OnSobreClicked"
-                    BackgroundColor="{StaticResource AreiaDourada}"
+                    BackgroundColor="Transparent"
+                    BorderColor="{StaticResource AreiaDourada}"
+                    BorderWidth="1.5"
                     TextColor="{StaticResource OffWhite}"/>
 
             </VerticalStackLayout>
@@ -106,7 +108,7 @@
                 Text="ALMARE RESORT • CONFORTO E TRANQUILIDADE"
                 FontSize="10"
                 CharacterSpacing="1"
-                TextColor="{StaticResource Azul}"
+                TextColor="{StaticResource AreiaDourada}"
                 HorizontalTextAlignment="Center"/>
 
         </VerticalStackLayout>

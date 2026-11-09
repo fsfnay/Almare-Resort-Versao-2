@@ -22,7 +22,8 @@
         <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="15" />
-        <Setter Property="CornerRadius" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="14" />
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="Padding" Value="18,12" />
         <Setter Property="MinimumHeightRequest" Value="48" />
@@ -51,7 +52,7 @@
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource Azul}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource TextoSecundario}" />
     </Style>
 
     <!-- Entry -->
@@ -60,14 +61,14 @@
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource Azul}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource TextoSecundario}" />
         <Setter Property="MinimumHeightRequest" Value="44" />
     </Style>
 
     <!-- Frame -->
     <Style TargetType="Frame">
-        <Setter Property="BackgroundColor" Value="{StaticResource OffWhite}" />
-        <Setter Property="BorderColor" Value="{StaticResource Secondary}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource CardBackground}" />
+        <Setter Property="BorderColor" Value="{StaticResource Gray200}" />
         <Setter Property="HasShadow" Value="False" />
         <Setter Property="CornerRadius" Value="12" />
         <Setter Property="Padding" Value="16" />
@@ -93,7 +94,7 @@
 
     <!-- Títulos -->
     <Style TargetType="Label" x:Key="Headline">
-        <Setter Property="TextColor" Value="{StaticResource Chumbo}" />
+        <Setter Property="TextColor" Value="{StaticResource Azul}" />
         <Setter Property="FontSize" Value="30" />
         <Setter Property="FontFamily" Value="OpenSansSemibold" />
         <Setter Property="HorizontalOptions" Value="Center" />
@@ -101,7 +102,7 @@
     </Style>
 
     <Style TargetType="Label" x:Key="SubHeadline">
-        <Setter Property="TextColor" Value="{StaticResource Azul}" />
+        <Setter Property="TextColor" Value="{StaticResource TextoSecundario}" />
         <Setter Property="FontSize" Value="20" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="HorizontalOptions" Value="Center" />
@@ -111,7 +112,7 @@
     <!-- Picker -->
     <Style TargetType="Picker">
         <Setter Property="TextColor" Value="{StaticResource Chumbo}" />
-        <Setter Property="TitleColor" Value="{StaticResource Azul}" />
+        <Setter Property="TitleColor" Value="{StaticResource TextoSecundario}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
@@ -144,14 +145,14 @@
     <!-- Shell -->
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
         <Setter Property="Shell.BackgroundColor" Value="{StaticResource OffWhite}" />
-        <Setter Property="Shell.ForegroundColor" Value="{StaticResource Azul}" />
+        <Setter Property="Shell.ForegroundColor" Value="{StaticResource TextoSecundario}" />
         <Setter Property="Shell.TitleColor" Value="{StaticResource Chumbo}" />
         <Setter Property="Shell.DisabledColor" Value="{StaticResource AreiaDourada}" />
-        <Setter Property="Shell.UnselectedColor" Value="{StaticResource Azul}" />
+        <Setter Property="Shell.UnselectedColor" Value="{StaticResource TextoSecundario}" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
         <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource OffWhite}" />
-        <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Azul}" />
-        <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Azul}" />
+        <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource TextoSecundario}" />
+        <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource TextoSecundario}" />
         <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource AreiaDourada}" />
     </Style>
 

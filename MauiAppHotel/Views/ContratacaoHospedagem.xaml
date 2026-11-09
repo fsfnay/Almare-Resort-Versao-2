@@ -3,162 +3,117 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
              Title="Almare Resort"
-             BackgroundColor="#F3F0E9">
+             BackgroundColor="{StaticResource Gray100}">
 
     <ScrollView>
-        <VerticalStackLayout Padding="24" Spacing="18">
+        <VerticalStackLayout Padding="22" Spacing="18">
 
-            <Label Text="ALMARE RESORT"
-                   FontSize="15"
-                   FontAttributes="Bold"
-                   CharacterSpacing="3"
-                   TextColor="#496779"
+            <Label Text="ALMARE RESORT" FontSize="14" FontAttributes="Bold"
+                   CharacterSpacing="3" TextColor="{StaticResource AreiaDourada}"
                    HorizontalOptions="Center"/>
-
-            <Label Text="Sua estadia começa aqui"
-                   FontSize="27"
-                   FontAttributes="Bold"
-                   TextColor="#303B3C"
-                   HorizontalOptions="Center"/>
-
+            <Label Text="Sua estadia começa aqui" FontSize="27" FontAttributes="Bold"
+                   TextColor="{StaticResource Azul}" HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
             <Label Text="Escolha os detalhes da sua hospedagem."
-                   FontSize="14"
-                   TextColor="#718779"
+                   FontSize="14" TextColor="{StaticResource TextoSecundario}"
                    HorizontalOptions="Center"/>
 
-            <Frame BackgroundColor="White"
-                   BorderColor="Transparent"
-                   CornerRadius="16"
-                   Padding="18">
-
+            <Border BackgroundColor="{StaticResource CardBackground}"
+                    Stroke="{StaticResource Gray200}" StrokeThickness="1"
+                    StrokeShape="RoundRectangle 18" Padding="18">
                 <VerticalStackLayout Spacing="14">
-
-                    <Label Text="Hóspedes"
-                           FontSize="19"
-                           FontAttributes="Bold"
-                           TextColor="#496779"/>
-
-                    <Grid ColumnDefinitions="*,Auto"
-                          RowDefinitions="Auto,Auto"
-                          RowSpacing="12">
-
-                        <Label Text="Adultos"
-                               Grid.Row="0"
-                               VerticalOptions="Center"
-                               TextColor="#303B3C"/>
-
-                        <Stepper x:Name="stp_adultos"
-                                 Grid.Row="0"
-                                 Grid.Column="1"
-                                 Minimum="0"
-                                 Maximum="10"
-                                 Value="1"
-                                 Increment="1"
-                                 ValueChanged="OnHospedesChanged"/>
-
-                        <Label Text="Crianças"
-                               Grid.Row="1"
-                               VerticalOptions="Center"
-                               TextColor="#303B3C"/>
-
-                        <Stepper x:Name="stp_criancas"
-                                 Grid.Row="1"
-                                 Grid.Column="1"
-                                 Minimum="0"
-                                 Maximum="10"
-                                 Value="0"
-                                 Increment="1"
-                                 ValueChanged="OnHospedesChanged"/>
-
+                    <Label Text="Hóspedes" FontSize="19" FontAttributes="Bold"
+                           TextColor="{StaticResource Azul}"/>
+                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" RowSpacing="12">
+                        <Label Text="Adultos" Grid.Row="0" VerticalOptions="Center" TextColor="{StaticResource Azul}"/>
+                        <Stepper x:Name="stp_adultos" Grid.Row="0" Grid.Column="1" Minimum="0" Maximum="10" Value="1" Increment="1" ValueChanged="OnHospedesChanged"/>
+                        <Label Text="Crianças" Grid.Row="1" VerticalOptions="Center" TextColor="{StaticResource Azul}"/>
+                        <Stepper x:Name="stp_criancas" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="10" Value="0" Increment="1" ValueChanged="OnHospedesChanged"/>
                     </Grid>
-
-                    <Label x:Name="lbl_total_hospedes"
-                           Text="Total: 1 hóspede"
-                           FontAttributes="Bold"
-                           TextColor="#718779"/>
-
+                    <Label x:Name="lbl_total_hospedes" Text="Total: 1 hóspede"
+                           FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
-            <Frame BackgroundColor="White"
-                   BorderColor="Transparent"
-                   CornerRadius="16"
-                   Padding="18">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Nossas suítes" FontSize="20" FontAttributes="Bold"
+                       TextColor="{StaticResource Azul}"/>
+                <Label Text="Selecione a acomodação ideal para sua estadia."
+                       FontSize="13" TextColor="{StaticResource TextoSecundario}"/>
 
+                <Border x:Name="cardStandard" BackgroundColor="{StaticResource CardBackground}"
+                        Stroke="{StaticResource Gray200}" StrokeThickness="1.5"
+                        StrokeShape="RoundRectangle 16" Padding="16">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStandardCardTapped"/>
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="STANDARD" FontSize="16" FontAttributes="Bold" CharacterSpacing="1" TextColor="{StaticResource Azul}"/>
+                            <Label Grid.Column="1" Text="2 hóspedes" FontSize="12" TextColor="{StaticResource TextoSecundario}"/>
+                        </Grid>
+                        <Label Text="Conforto essencial para uma viagem a dois." FontSize="13" TextColor="{StaticResource TextoSecundario}"/>
+                        <Label Text="1 cama de casal" FontSize="12" TextColor="{StaticResource AzulSuave}"/>
+                        <Label Text="R$ 250,00  / diária" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource AreiaDourada}"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border x:Name="cardDeluxe" BackgroundColor="{StaticResource CardBackground}"
+                        Stroke="{StaticResource Gray200}" StrokeThickness="1.5"
+                        StrokeShape="RoundRectangle 16" Padding="16">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDeluxeCardTapped"/>
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="DELUXE" FontSize="16" FontAttributes="Bold" CharacterSpacing="1" TextColor="{StaticResource Azul}"/>
+                            <Label Grid.Column="1" Text="3 hóspedes" FontSize="12" TextColor="{StaticResource TextoSecundario}"/>
+                        </Grid>
+                        <Label Text="Mais espaço e conforto para pequenas famílias." FontSize="13" TextColor="{StaticResource TextoSecundario}"/>
+                        <Label Text="1 cama de casal + 1 de solteiro" FontSize="12" TextColor="{StaticResource AzulSuave}"/>
+                        <Label Text="R$ 400,00  / diária" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource AreiaDourada}"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border x:Name="cardPremium" BackgroundColor="{StaticResource CardBackground}"
+                        Stroke="{StaticResource Gray200}" StrokeThickness="1.5"
+                        StrokeShape="RoundRectangle 16" Padding="16">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPremiumCardTapped"/>
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="PREMIUM" FontSize="16" FontAttributes="Bold" CharacterSpacing="1" TextColor="{StaticResource Azul}"/>
+                            <Label Grid.Column="1" Text="4 hóspedes" FontSize="12" TextColor="{StaticResource TextoSecundario}"/>
+                        </Grid>
+                        <Label Text="Uma experiência ampla para aproveitar cada momento." FontSize="13" TextColor="{StaticResource TextoSecundario}"/>
+                        <Label Text="Duas opções de configuração de camas" FontSize="12" TextColor="{StaticResource AzulSuave}"/>
+                        <Label Text="R$ 550,00  / diária" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource AreiaDourada}"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Picker mantido para preservar a lógica já existente de seleção e reserva. -->
+                <Picker x:Name="pck_quarto" IsVisible="False" SelectedIndexChanged="OnQuartoChanged"/>
+                <Label x:Name="lbl_descricao_quarto" IsVisible="False"/>
+                <Picker x:Name="pck_camas" Title="Configuração das camas" IsVisible="False"/>
+                <Label Text="Ao escolher a suíte Premium, você poderá selecionar a configuração das camas na próxima etapa." FontSize="11" TextColor="{StaticResource TextoSecundario}"/>
+            </VerticalStackLayout>
+
+            <Border BackgroundColor="{StaticResource CardBackground}" Stroke="{StaticResource Gray200}"
+                    StrokeThickness="1" StrokeShape="RoundRectangle 18" Padding="18">
                 <VerticalStackLayout Spacing="12">
-
-                    <Label Text="Acomodação"
-                           FontSize="19"
-                           FontAttributes="Bold"
-                           TextColor="#496779"/>
-
-                    <Label Text="Selecione a suíte desejada"
-                           FontSize="13"
-                           TextColor="#718779"/>
-
-                    <Picker x:Name="pck_quarto"
-                            Title="Escolha sua suíte"
-                            TextColor="#303B3C"
-                            SelectedIndexChanged="OnQuartoChanged"/>
-
-                    <Label x:Name="lbl_descricao_quarto"
-                           Text="Selecione uma acomodação para ver os detalhes."
-                           FontSize="13"
-                           TextColor="#718779"/>
-
-                    <Picker x:Name="pck_camas"
-                            Title="Configuração das camas"
-                            IsVisible="False"
-                            TextColor="#303B3C"/>
-
+                    <Label Text="Período da estadia" FontSize="19" FontAttributes="Bold" TextColor="{StaticResource Azul}"/>
+                    <Label Text="Check-in" FontAttributes="Bold" TextColor="{StaticResource Azul}"/>
+                    <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy" TextColor="{StaticResource Azul}"/>
+                    <Label Text="Check-out" FontAttributes="Bold" TextColor="{StaticResource Azul}"/>
+                    <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy" TextColor="{StaticResource Azul}"/>
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
-            <Frame BackgroundColor="White"
-                   BorderColor="Transparent"
-                   CornerRadius="16"
-                   Padding="18">
-
-                <VerticalStackLayout Spacing="12">
-
-                    <Label Text="Período da estadia"
-                           FontSize="19"
-                           FontAttributes="Bold"
-                           TextColor="#496779"/>
-
-                    <Label Text="Check-in"
-                           FontAttributes="Bold"
-                           TextColor="#303B3C"/>
-
-                    <DatePicker x:Name="dtpck_checkin"
-                                Format="dd/MM/yyyy"
-                                TextColor="#303B3C"/>
-
-                    <Label Text="Check-out"
-                           FontAttributes="Bold"
-                           TextColor="#303B3C"/>
-
-                    <DatePicker x:Name="dtpck_checkout"
-                                Format="dd/MM/yyyy"
-                                TextColor="#303B3C"/>
-
-                </VerticalStackLayout>
-            </Frame>
-
-            <Button Text="Continuar"
-                    Clicked="OnAvancarClicked"
-                    BackgroundColor="#496779"
-                    TextColor="White"
-                    CornerRadius="12"
-                    FontAttributes="Bold"
-                    HeightRequest="52"/>
-
-            <Label Text="Almare Resort • Um refúgio para renovar os sentidos."
-                   FontSize="11"
-                   TextColor="#718779"
-                   HorizontalTextAlignment="Center"
-                   Margin="0,4,0,12"/>
-
+            <Button Text="Continuar" Clicked="OnAvancarClicked" BackgroundColor="{StaticResource Azul}"
+                    TextColor="{StaticResource White}" CornerRadius="14" FontAttributes="Bold" HeightRequest="52"/>
+            <Label Text="Almare Resort • Um refúgio para renovar os sentidos." FontSize="11"
+                   TextColor="{StaticResource TextoSecundario}" HorizontalTextAlignment="Center" Margin="0,4,0,12"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

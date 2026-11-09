@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratada"
              Title="Sua hospedagem"
-             BackgroundColor="#F3F0E9">
+             BackgroundColor="{StaticResource Gray100}">
 
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="18">
@@ -12,7 +12,7 @@
                    FontSize="15"
                    FontAttributes="Bold"
                    CharacterSpacing="3"
-                   TextColor="#496779"
+                   TextColor="{StaticResource Azul}"
                    HorizontalOptions="Center"/>
 
             <!-- RESUMO DA RESERVA -->
@@ -23,16 +23,16 @@
                 <Label Text="Confira sua hospedagem"
                        FontSize="26"
                        FontAttributes="Bold"
-                       TextColor="#303B3C"
+                       TextColor="{StaticResource Azul}"
                        HorizontalTextAlignment="Center"/>
 
                 <Label Text="Confira todos os detalhes antes de confirmar."
                        FontSize="14"
-                       TextColor="#718779"
+                       TextColor="{StaticResource TextoSecundario}"
                        HorizontalTextAlignment="Center"/>
 
-                <Frame BackgroundColor="White"
-                       BorderColor="Transparent"
+                <Frame BackgroundColor="{StaticResource CardBackground}"
+                       BorderColor="{StaticResource Gray200}"
                        CornerRadius="16"
                        Padding="20">
 
@@ -42,66 +42,66 @@
                                FontSize="13"
                                CharacterSpacing="2"
                                FontAttributes="Bold"
-                               TextColor="#718779"/>
+                               TextColor="{StaticResource TextoSecundario}"/>
 
                         <Label Text="Acomodação"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_quarto"
                                FontSize="20"
                                FontAttributes="Bold"
-                               TextColor="#303B3C"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_camas"
                                FontSize="14"
-                               TextColor="#718779"/>
+                               TextColor="{StaticResource TextoSecundario}"/>
 
                         <BoxView HeightRequest="1"
-                                 Color="#E5E1D8"/>
+                                 Color="{StaticResource Gray200}"/>
 
                         <Label Text="Hóspedes"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_hospedes"
-                               TextColor="#303B3C"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <BoxView HeightRequest="1"
-                                 Color="#E5E1D8"/>
+                                 Color="{StaticResource Gray200}"/>
 
                         <Label Text="Período"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_periodo"
-                               TextColor="#303B3C"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_noites"
-                               TextColor="#718779"/>
+                               TextColor="{StaticResource TextoSecundario}"/>
 
                         <BoxView HeightRequest="1"
-                                 Color="#E5E1D8"/>
+                                 Color="{StaticResource Gray200}"/>
 
                         <Label Text="Investimento"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_diaria"
-                               TextColor="#303B3C"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_total"
                                FontSize="25"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                     </VerticalStackLayout>
                 </Frame>
 
                 <Button Text="Confirmar reserva"
                         Clicked="OnConfirmarClicked"
-                        BackgroundColor="#496779"
-                        TextColor="White"
+                        BackgroundColor="{StaticResource Azul}"
+                        TextColor="{StaticResource White}"
                         CornerRadius="12"
                         FontAttributes="Bold"
                         HeightRequest="52"/>
@@ -109,8 +109,8 @@
                 <Button Text="Voltar"
                         Clicked="OnVoltarClicked"
                         BackgroundColor="Transparent"
-                        TextColor="#496779"
-                        BorderColor="#496779"
+                        TextColor="{StaticResource Azul}"
+                        BorderColor="{StaticResource Azul}"
                         BorderWidth="1"
                         CornerRadius="12"
                         HeightRequest="48"/>
@@ -126,22 +126,22 @@
                 <Label Text="✓"
                        FontSize="55"
                        FontAttributes="Bold"
-                       TextColor="#718779"
+                       TextColor="{StaticResource TextoSecundario}"
                        HorizontalOptions="Center"/>
 
                 <Label Text="Sua reserva está confirmada!"
                        FontSize="26"
                        FontAttributes="Bold"
-                       TextColor="#303B3C"
+                       TextColor="{StaticResource Azul}"
                        HorizontalTextAlignment="Center"/>
 
                 <Label Text="Obrigado por escolher o Almare Resort. Estamos esperando por você!"
                        FontSize="14"
-                       TextColor="#718779"
+                       TextColor="{StaticResource TextoSecundario}"
                        HorizontalTextAlignment="Center"/>
 
-                <Frame BackgroundColor="White"
-                       BorderColor="Transparent"
+                <Frame BackgroundColor="{StaticResource CardBackground}"
+                       BorderColor="{StaticResource Gray200}"
                        CornerRadius="16"
                        Padding="20">
 
@@ -151,67 +151,67 @@
                                FontSize="13"
                                CharacterSpacing="2"
                                FontAttributes="Bold"
-                               TextColor="#718779"/>
+                               TextColor="{StaticResource TextoSecundario}"/>
 
                         <Label x:Name="lbl_codigo"
                                FontSize="13"
-                               TextColor="#718779"/>
+                               TextColor="{StaticResource TextoSecundario}"/>
 
                         <Label x:Name="lbl_quartoFinal"
                                FontSize="21"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_camasFinal"
-                               TextColor="#303B3C"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <BoxView HeightRequest="1"
-                                 Color="#E5E1D8"/>
+                                 Color="{StaticResource Gray200}"/>
 
                         <Label Text="Hóspedes"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_hospedesFinal"
-                               TextColor="#303B3C"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <BoxView HeightRequest="1"
-                                 Color="#E5E1D8"/>
+                                 Color="{StaticResource Gray200}"/>
 
                         <Label Text="Check-in e check-out"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_periodoFinal"
-                               TextColor="#303B3C"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_noitesFinal"
-                               TextColor="#718779"/>
+                               TextColor="{StaticResource TextoSecundario}"/>
 
                         <BoxView HeightRequest="1"
-                                 Color="#E5E1D8"/>
+                                 Color="{StaticResource Gray200}"/>
 
                         <Label Text="Valor total"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                         <Label x:Name="lbl_totalFinal"
                                FontSize="25"
                                FontAttributes="Bold"
-                               TextColor="#496779"/>
+                               TextColor="{StaticResource Azul}"/>
 
                     </VerticalStackLayout>
                 </Frame>
 
                 <Label Text="Almare Resort • Um refúgio para renovar os sentidos."
                        FontSize="11"
-                       TextColor="#718779"
+                       TextColor="{StaticResource TextoSecundario}"
                        HorizontalTextAlignment="Center"/>
 
-                <Button Text="Voltar ao início"
+                <Button Text="Concluir"
                         Clicked="OnInicioClicked"
-                        BackgroundColor="#496779"
-                        TextColor="White"
+                        BackgroundColor="{StaticResource Azul}"
+                        TextColor="{StaticResource White}"
                         CornerRadius="12"
                         FontAttributes="Bold"
                         HeightRequest="52"/>

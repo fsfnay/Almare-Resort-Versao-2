@@ -17,7 +17,7 @@
                    FontSize="23"
                    FontAttributes="Bold"/>
 
-            <Frame Padding="20" BackgroundColor="White">
+            <Frame Padding="20" BackgroundColor="{StaticResource CardBackground}">
 
                 <VerticalStackLayout Spacing="14">
 
@@ -54,7 +54,7 @@
                     Text="CONFIRMAR RESERVA"
                     Clicked="OnConfirmarClicked"
                     BackgroundColor="{StaticResource Primary}"
-                    TextColor="White"
+                    TextColor="{StaticResource White}"
                     CornerRadius="12"
                     HeightRequest="55"/>
 
